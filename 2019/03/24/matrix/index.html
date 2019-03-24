@@ -5,18 +5,18 @@
   
   <title>稀疏矩阵运算器 | 朱一丹的作品集</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="(2016.12课程设计—-稀疏矩阵运算器) 设计要求稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。 以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。 My Part我负责的部分是">
+  <meta name="description" content="(2016.12课程设计—-稀疏矩阵运算器) 设计要求稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。 以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="稀疏矩阵运算器">
 <meta property="og:url" content="http://yoursite.com/2019/03/24/matrix/index.html">
 <meta property="og:site_name" content="朱一丹的作品集">
-<meta property="og:description" content="(2016.12课程设计—-稀疏矩阵运算器) 设计要求稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。 以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。 My Part我负责的部分是">
+<meta property="og:description" content="(2016.12课程设计—-稀疏矩阵运算器) 设计要求稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。 以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/03/24/matrix/matrix.jpg">
-<meta property="og:updated_time" content="2019-03-24T12:30:02.011Z">
+<meta property="og:updated_time" content="2019-03-24T16:12:19.595Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="稀疏矩阵运算器">
-<meta name="twitter:description" content="(2016.12课程设计—-稀疏矩阵运算器) 设计要求稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。 以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。 My Part我负责的部分是">
+<meta name="twitter:description" content="(2016.12课程设计—-稀疏矩阵运算器) 设计要求稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。 以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。">
 <meta name="twitter:image" content="http://yoursite.com/2019/03/24/matrix/matrix.jpg">
   
     <link rel="alternate" href="/atom.xml" title="朱一丹的作品集" type="application/atom+xml">
@@ -90,7 +90,7 @@
       
         <p>(2016.12课程设计—-稀疏矩阵运算器)</p>
 <h1 id="设计要求"><a href="#设计要求" class="headerlink" title="设计要求"></a>设计要求</h1><p>稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。</p>
-<p>以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。</p>
+<p>以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。<br><a id="more"></a></p>
 <h1 id="My-Part"><a href="#My-Part" class="headerlink" title="My Part"></a>My Part</h1><p>我负责的部分是矩阵的加减运算以及小组最后成果的集成</p>
 <h2 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h2><p>涉及两个结构体<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">  int row; </span><br><span class="line">  int col;  </span><br><span class="line">  int data;</span><br><span class="line">&#125;triple;    </span><br><span class="line"></span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">  triple data[maxsize];</span><br><span class="line">  int m,n,len;</span><br><span class="line">&#125;matrix;</span><br></pre></td></tr></table></figure></p>
 <h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">matrix *Init()</span><br><span class="line">&#123;</span><br><span class="line">  int j=<span class="number">0</span>;</span><br><span class="line">  matrix *A;</span><br><span class="line">  A=(matrix*)malloc(sizeof(matrix));</span><br><span class="line">  A-&gt;len=<span class="number">0</span>;</span><br><span class="line">  A-&gt;m=<span class="number">0</span>;</span><br><span class="line">  A-&gt;n=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;maxsize;j++)</span><br><span class="line">  &#123;</span><br><span class="line">    A-&gt;data[j].col=<span class="number">0</span>;</span><br><span class="line">    A-&gt;data[j].row=<span class="number">0</span>;</span><br><span class="line">    A-&gt;data[j].data=<span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> A;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -101,7 +101,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/24/matrix/" data-id="cjtn3x0550000a0vtzcfxp9nc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/24/matrix/" data-id="cjtn4f83s00001gvt87ujumhp" class="article-share-link">Share</a>
       
       
     </footer>
