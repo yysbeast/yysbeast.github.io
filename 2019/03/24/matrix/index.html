@@ -5,18 +5,18 @@
   
   <title>稀疏矩阵运算器 | 朱一丹的作品集</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="(2016.12课程设计—-稀疏矩阵运算器) 设计要求稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。 以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。">
+  <meta name="description" content="(数据结构课程设计—-稀疏矩阵运算器) 设计要求稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。 以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="稀疏矩阵运算器">
 <meta property="og:url" content="http://yoursite.com/2019/03/24/matrix/index.html">
 <meta property="og:site_name" content="朱一丹的作品集">
-<meta property="og:description" content="(2016.12课程设计—-稀疏矩阵运算器) 设计要求稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。 以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。">
+<meta property="og:description" content="(数据结构课程设计—-稀疏矩阵运算器) 设计要求稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。 以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/03/24/matrix/matrix.jpg">
-<meta property="og:updated_time" content="2019-03-24T16:12:19.595Z">
+<meta property="og:updated_time" content="2019-03-24T16:13:30.156Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="稀疏矩阵运算器">
-<meta name="twitter:description" content="(2016.12课程设计—-稀疏矩阵运算器) 设计要求稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。 以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。">
+<meta name="twitter:description" content="(数据结构课程设计—-稀疏矩阵运算器) 设计要求稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。 以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。">
 <meta name="twitter:image" content="http://yoursite.com/2019/03/24/matrix/matrix.jpg">
   
     <link rel="alternate" href="/atom.xml" title="朱一丹的作品集" type="application/atom+xml">
@@ -88,7 +88,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>(2016.12课程设计—-稀疏矩阵运算器)</p>
+        <p>(数据结构课程设计—-稀疏矩阵运算器)</p>
 <h1 id="设计要求"><a href="#设计要求" class="headerlink" title="设计要求"></a>设计要求</h1><p>稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。</p>
 <p>以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。<br><a id="more"></a></p>
 <h1 id="My-Part"><a href="#My-Part" class="headerlink" title="My Part"></a>My Part</h1><p>我负责的部分是矩阵的加减运算以及小组最后成果的集成</p>
@@ -101,7 +101,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/24/matrix/" data-id="cjtn4f83s00001gvt87ujumhp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/24/matrix/" data-id="cjtn4m2560000fcvtx18atw8e" class="article-share-link">Share</a>
       
       
     </footer>
