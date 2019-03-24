@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>稀疏矩阵运算器 | 朱一丹的作品集</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(2016.12课程设计—-稀疏矩阵运算器) 设计要求稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。 以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。 My Part我负责的部分是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="稀疏矩阵运算器">
+<meta property="og:url" content="http://yoursite.com/2019/03/24/matrix/index.html">
+<meta property="og:site_name" content="朱一丹的作品集">
+<meta property="og:description" content="(2016.12课程设计—-稀疏矩阵运算器) 设计要求稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。 以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。 My Part我负责的部分是">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/03/24/matrix/matrix.jpg">
+<meta property="og:updated_time" content="2019-03-24T12:30:02.011Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="稀疏矩阵运算器">
+<meta name="twitter:description" content="(2016.12课程设计—-稀疏矩阵运算器) 设计要求稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。 以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。 My Part我负责的部分是">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/24/matrix/matrix.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="朱一丹的作品集" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">朱一丹的作品集</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-matrix" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/24/matrix/" class="article-date">
+  <time datetime="2019-03-24T11:00:04.763Z" itemprop="datePublished">2019-03-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      稀疏矩阵运算器
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(2016.12课程设计—-稀疏矩阵运算器)</p>
+<h1 id="设计要求"><a href="#设计要求" class="headerlink" title="设计要求"></a>设计要求</h1><p>稀疏矩阵是指那些多数元素为零的矩阵。利用“稀疏”特点进行存储和计算可以大大节省存储空间，提高计算准备效率。实现一个能进行稀疏矩阵基本运算的运算器。</p>
+<p>以“带行逻辑链接信息”的三元组顺序表示稀疏矩阵，实现两个稀疏矩阵相加、相减、相乘和求逆的运算。稀疏矩阵的输入形式采用三元组表示，而运算结果的矩阵则以通常的阵列形式列出。</p>
+<h1 id="My-Part"><a href="#My-Part" class="headerlink" title="My Part"></a>My Part</h1><p>我负责的部分是矩阵的加减运算以及小组最后成果的集成</p>
+<h2 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h2><p>涉及两个结构体<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">  int row; </span><br><span class="line">  int col;  </span><br><span class="line">  int data;</span><br><span class="line">&#125;triple;    </span><br><span class="line"></span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">  triple data[maxsize];</span><br><span class="line">  int m,n,len;</span><br><span class="line">&#125;matrix;</span><br></pre></td></tr></table></figure></p>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">matrix *Init()</span><br><span class="line">&#123;</span><br><span class="line">  int j=<span class="number">0</span>;</span><br><span class="line">  matrix *A;</span><br><span class="line">  A=(matrix*)malloc(sizeof(matrix));</span><br><span class="line">  A-&gt;len=<span class="number">0</span>;</span><br><span class="line">  A-&gt;m=<span class="number">0</span>;</span><br><span class="line">  A-&gt;n=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;maxsize;j++)</span><br><span class="line">  &#123;</span><br><span class="line">    A-&gt;data[j].col=<span class="number">0</span>;</span><br><span class="line">    A-&gt;data[j].row=<span class="number">0</span>;</span><br><span class="line">    A-&gt;data[j].data=<span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> A;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="加减部分实现"><a href="#加减部分实现" class="headerlink" title="加减部分实现"></a>加减部分实现</h2><p>矩阵的加减部分相对来说比较简单，首先要确认两个矩阵是否符合相加减的条件，即两个矩阵的行列均相同，然后相同位置进行相加得到的结果存储到新建的C矩阵中。而减法是在实现加法的基础上，只需要将B矩阵的值换成负值，再进行加法运算即可。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> add(matrix *a,matrix *b,matrix **c)</span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">if</span>(a-&gt;m==b-&gt;m&amp;&amp;a-&gt;n==b-&gt;n)</span><br><span class="line">  &#123;</span><br><span class="line">    int i=<span class="number">0</span>,j=<span class="number">0</span>,k=<span class="number">0</span>;</span><br><span class="line">    (*c)-&gt;m=a-&gt;m;</span><br><span class="line">    (*c)-&gt;n=a-&gt;n;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;a-&gt;len||j&lt;b-&gt;len)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">if</span>(i==a-&gt;len&amp;&amp;j&lt;b-&gt;len)</span><br><span class="line">      &#123;</span><br><span class="line">        (*c)-&gt;data[k].col=b-&gt;data[j].col;</span><br><span class="line">        (*c)-&gt;data[k].row=b-&gt;data[j].row;</span><br><span class="line">        (*c)-&gt;data[k++].data=b-&gt;data[j].data;</span><br><span class="line">        (*c)-&gt;len++;</span><br><span class="line">        j++;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(i&lt;a-&gt;len&amp;&amp;j==b-&gt;len)</span><br><span class="line">      &#123;</span><br><span class="line">        (*c)-&gt;data[k].col=a-&gt;data[i].col;</span><br><span class="line">        (*c)-&gt;data[k].row=a-&gt;data[i].row;</span><br><span class="line">        (*c)-&gt;data[k++].data=a-&gt;data[i].data;</span><br><span class="line">        (*c)-&gt;len++;</span><br><span class="line">        i++;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">      &#123;</span><br><span class="line">        <span class="keyword">if</span>(a-&gt;data[i].row&gt;b-&gt;data[j].row)</span><br><span class="line">        &#123;</span><br><span class="line">          (*c)-&gt;data[k].col=b-&gt;data[j].col;</span><br><span class="line">          (*c)-&gt;data[k].row=b-&gt;data[j].row;</span><br><span class="line">          (*c)-&gt;data[k++].data=b-&gt;data[j].data;</span><br><span class="line">          (*c)-&gt;len++;</span><br><span class="line">          j++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(a-&gt;data[i].row&lt;b-&gt;data[j].row)</span><br><span class="line">        &#123;</span><br><span class="line">          (*c)-&gt;data[k].col=a-&gt;data[i].col;</span><br><span class="line">          (*c)-&gt;data[k].row=a-&gt;data[i].row;</span><br><span class="line">          (*c)-&gt;data[k++].data=a-&gt;data[i].data;</span><br><span class="line">          (*c)-&gt;len++;</span><br><span class="line">          i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="keyword">if</span>(a-&gt;data[i].col==b-&gt;data[j].col)</span><br><span class="line">          &#123;</span><br><span class="line">            <span class="keyword">if</span>(a-&gt;data[i].data+b-&gt;data[j].data!=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">              (*c)-&gt;data[k].col=a-&gt;data[i].col;</span><br><span class="line">              (*c)-&gt;data[k].row=a-&gt;data[i].row;</span><br><span class="line">              (*c)-&gt;data[k++].data=a-&gt;data[i].data+b-&gt;data[j].data;</span><br><span class="line">              (*c)-&gt;len++;</span><br><span class="line">            &#125;</span><br><span class="line">            i++;</span><br><span class="line">            j++;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">else</span> <span class="keyword">if</span>(a-&gt;data[i].col&gt;b-&gt;data[j].col)</span><br><span class="line">          &#123;</span><br><span class="line">            (*c)-&gt;data[k].col=b-&gt;data[j].col;</span><br><span class="line">            (*c)-&gt;data[k].row=b-&gt;data[j].row;</span><br><span class="line">            (*c)-&gt;data[k++].data=b-&gt;data[j].data;</span><br><span class="line">            (*c)-&gt;len++;</span><br><span class="line">            j++;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">else</span> <span class="keyword">if</span>(a-&gt;data[i].col&lt;b-&gt;data[j].col)</span><br><span class="line">          &#123;</span><br><span class="line">            (*c)-&gt;data[k].col=a-&gt;data[i].col;</span><br><span class="line">            (*c)-&gt;data[k].row=a-&gt;data[i].row;</span><br><span class="line">            (*c)-&gt;data[k++].data=a-&gt;data[i].data;</span><br><span class="line">            (*c)-&gt;len++;</span><br><span class="line">            i++;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">  &#123;</span><br><span class="line">    printf(<span class="string">"您输入的两个矩阵不满足运算条件！\n"</span>);</span><br><span class="line">    system(<span class="string">"pause"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> sub(matrix *A,matrix *B,matrix **C)</span><br><span class="line">&#123;</span><br><span class="line">  int k=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(k=<span class="number">0</span>;k&lt;B-&gt;len;k++) </span><br><span class="line">	  B-&gt;data[k].data=-B-&gt;data[k].data;</span><br><span class="line">  <span class="keyword">if</span>(A-&gt;m==B-&gt;m&amp;&amp;A-&gt;n==B-&gt;n) </span><br><span class="line">	  add(A,B,C);</span><br><span class="line">  <span class="keyword">else</span> printf(<span class="string">"不能相减！\n"</span>);</span><br><span class="line">  <span class="keyword">for</span>(k=<span class="number">0</span>;k&lt;B-&gt;len;k++)</span><br><span class="line">      B-&gt;data[k].data=-B-&gt;data[k].data;</span><br><span class="line">    system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="运行截图"><a href="#运行截图" class="headerlink" title="运行截图"></a>运行截图</h2><p><img src="/2019/03/24/matrix/matrix.jpg" alt="运行结果"></p>
+<h1 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h1><p>在大二接触数据结构后，在这次的课程设计中也对矩阵的存储以及计算有了了解，这也是第一次小组合作，大家负责不同部分的代码实现不同的功能，最后集成的过程中也出了很多问题，包括结构体刚开始定义时候的不同以及最后结果输出形式的统一。<br>（仅展示了我做的部分，实际效果是实现了矩阵的加减乘转置以及求逆运算）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/03/24/matrix/" data-id="cjtn1wy4m000034vt2kxa07r6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/03/24/matrix/">稀疏矩阵运算器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Yidan Zhu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
