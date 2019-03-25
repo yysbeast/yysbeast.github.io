@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>网络游戏设计与开发课程课程设计 | 朱一丹的作品集</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(—-坦克大战心得) 设计要求网络游戏这个课程设计，老师当初的出发点是想让我们将完整的开发网络游戏的过程进行下来，所以根据教材将主要过程进行重新实现，然后进行分析学习。 单机部分首先刚开始是要实现基本功能完整的单机游戏，实现坦克行走、旋转炮塔、发射炮弹、击杀提示、击杀音效、制造僵尸坦克、代码界面分离等功能 房间部分同步部分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络游戏设计与开发课程课程设计">
+<meta property="og:url" content="http://yoursite.com/2019/03/25/tank/index.html">
+<meta property="og:site_name" content="朱一丹的作品集">
+<meta property="og:description" content="(—-坦克大战心得) 设计要求网络游戏这个课程设计，老师当初的出发点是想让我们将完整的开发网络游戏的过程进行下来，所以根据教材将主要过程进行重新实现，然后进行分析学习。 单机部分首先刚开始是要实现基本功能完整的单机游戏，实现坦克行走、旋转炮塔、发射炮弹、击杀提示、击杀音效、制造僵尸坦克、代码界面分离等功能 房间部分同步部分">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-25T15:17:39.418Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网络游戏设计与开发课程课程设计">
+<meta name="twitter:description" content="(—-坦克大战心得) 设计要求网络游戏这个课程设计，老师当初的出发点是想让我们将完整的开发网络游戏的过程进行下来，所以根据教材将主要过程进行重新实现，然后进行分析学习。 单机部分首先刚开始是要实现基本功能完整的单机游戏，实现坦克行走、旋转炮塔、发射炮弹、击杀提示、击杀音效、制造僵尸坦克、代码界面分离等功能 房间部分同步部分">
+  
+    <link rel="alternate" href="/atom.xml" title="朱一丹的作品集" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">朱一丹的作品集</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-tank" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/25/tank/" class="article-date">
+  <time datetime="2019-03-25T15:15:37.000Z" itemprop="datePublished">2019-03-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      网络游戏设计与开发课程课程设计
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(—-坦克大战心得)</p>
+<h1 id="设计要求"><a href="#设计要求" class="headerlink" title="设计要求"></a>设计要求</h1><p>网络游戏这个课程设计，老师当初的出发点是想让我们将完整的开发网络游戏的过程进行下来，所以根据教材将主要过程进行重新实现，然后进行分析学习。</p>
+<h3 id="单机部分"><a href="#单机部分" class="headerlink" title="单机部分"></a>单机部分</h3><p>首先刚开始是要实现基本功能完整的单机游戏，实现坦克行走、旋转炮塔、发射炮弹、击杀提示、击杀音效、制造僵尸坦克、代码界面分离等功能</p>
+<h3 id="房间部分"><a href="#房间部分" class="headerlink" title="房间部分"></a>房间部分</h3><h3 id="同步部分"><a href="#同步部分" class="headerlink" title="同步部分"></a>同步部分</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/03/25/tank/" data-id="cjtoi01at0000w0vt0cdabd8k" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/03/25/python/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          用SVM及KNN分类CIFAR10
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/03/25/ar/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">基于AR的益智涂涂乐游戏设计与开发</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/03/25/python/">用SVM及KNN分类CIFAR10</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/25/tank/">网络游戏设计与开发课程课程设计</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/25/ar/">基于AR的益智涂涂乐游戏设计与开发</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/24/modelunity/">三维视景仿真开发工具课程设计</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/24/matrix/">稀疏矩阵运算器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Yidan Zhu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
